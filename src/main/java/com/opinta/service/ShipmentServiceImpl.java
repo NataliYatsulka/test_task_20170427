@@ -118,13 +118,14 @@ public class ShipmentServiceImpl implements ShipmentService {
             log.debug("Can't update shipment. Shipment doesn't exist {}", id);
             return null;
         }
-        target.setPrice(calculatePrice(target));
+//        target.setPrice(calculatePrice(target));
         try {
             copyProperties(target, source);
         } catch (Exception e) {
             log.error("Can't get properties from object to updatable object for shipment", e);
         }
         target.setId(id);
+        target.setPrice(calculatePrice(target));
         log.info("Updating shipment {}", target);
         shipmentDao.update(target);
         return shipmentMapper.toDto(target);
