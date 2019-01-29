@@ -118,7 +118,7 @@ public class ShipmentServiceImpl implements ShipmentService {
             log.debug("Can't update shipment. Shipment doesn't exist {}", id);
             return null;
         }
-//        target.setPrice(calculatePrice(target));
+
         try {
             copyProperties(target, source);
         } catch (Exception e) {
