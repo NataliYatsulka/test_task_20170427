@@ -1,11 +1,14 @@
 package com.opinta.dto;
 
 import com.opinta.entity.ParcelItem;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
+@Setter
 public class ParcelDto {
 
   private long id;

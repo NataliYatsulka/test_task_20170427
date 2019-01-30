@@ -15,12 +15,12 @@
         <springframework.version>4.3.0.RELEASE</springframework.version>
         <jackson.version>2.7.5</jackson.version>
         <hibernate.version>4.3.5.Final</hibernate.version>
-        <hibernate-validator.version>4.3.1.Final</hibernate-validator.version>
+        <hibernate-validator.version>6.0.13.Final</hibernate-validator.version>
         <org.mapstruct.version>1.2.0.Beta1</org.mapstruct.version>
         <org.projectlombok.version>1.18.4</org.projectlombok.version>
         <rest-assured.version>3.0.2</rest-assured.version>
         <junit.version>4.12</junit.version>
-        <hsqldb.version>2.3.2</hsqldb.version>
+        <hsqldb.version>2.4.0</hsqldb.version>
     </properties>
 
     <dependencies>

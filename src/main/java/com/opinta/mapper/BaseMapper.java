@@ -15,7 +15,7 @@ public interface BaseMapper<DTO, ENTITY> {
 
     List<DTO> toDto(List<ENTITY> entities);
 
-    @InheritInverseConfiguration
+    //@InheritInverseConfiguration
     ENTITY toEntity(DTO dto);
 
     List<ENTITY> toEntity(List<DTO> dtos);

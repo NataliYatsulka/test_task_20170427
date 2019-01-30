@@ -1,5 +1,6 @@
 package com.opinta.service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import com.opinta.dto.ShipmentDto;
@@ -24,4 +25,10 @@ public interface ShipmentService {
     ShipmentDto update(long id, ShipmentDto shipmentDto);
     
     boolean delete(long id);
+
+    BigDecimal calculateAll(Shipment shipment);
+
+    float getWeight(Shipment shipment);
+
+    BigDecimal getDeclaredPrice(Shipment shipment);
 }

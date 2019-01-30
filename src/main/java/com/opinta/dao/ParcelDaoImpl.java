@@ -16,29 +16,35 @@ public class ParcelDaoImpl implements ParcelDao {
     this.sessionFactory = sessionFactory;
   }
 
-  List<Parcel> getAll() {
+  @Override
+  @SuppressWarnings("unchecked")
+  public List<Parcel> getAll() {
     Session session = sessionFactory.getCurrentSession();
     return session.createCriteria(Parcel.class)
             .setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY)
             .list();
   }
 
-  Parcel getById(long id) {
+  @Override
+  public Parcel getById(long id) {
     Session session = sessionFactory.getCurrentSession();
     return (Parcel) session.get(Parcel.class, id);
   }
 
-  Parcel save(Parcel parcel) {
+  @Override
+  public Parcel save(Parcel parcel) {
     Session session = sessionFactory.getCurrentSession();
     return (Parcel) session.merge(parcel);
   }
 
-  void update(Parcel parcel) {
+  @Override
+  public void update(Parcel parcel) {
     Session session = sessionFactory.getCurrentSession();
     session.update(parcel);
   }
 
-  void delete(Parcel parcel) {
+  @Override
+  public void delete(Parcel parcel) {
     Session session = sessionFactory.getCurrentSession();
     session.delete(parcel);
   }
